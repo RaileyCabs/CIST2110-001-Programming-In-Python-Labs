@@ -37,8 +37,13 @@ print(my_dict)
 # 7. Remove the key value pair with the key "city".
 my_dict.pop("city")
 # 8. Print out the dictionary.
+<<<<<<< HEAD
 print(my_dict)
 # 9. Create a dictionary called cities with an key as the City name and values as a list that contains the state, population, and country.
+=======
+
+# 9. Create a dictionary called cities with an key as the City name and values as a dictionary that contains the state, population, and country.
+>>>>>>> 65906ed8d0f28086dbc98c849d0d0b4918895f81
 # use the following data:
 # Trenton, New Jersey, 84,913, USA
 # New York City, New York, 8,336,817, USA
@@ -98,11 +103,11 @@ headers = ['City', 'State', 'Population', 'Country']
 
 print(tabulate(cities, headers=headers, tablefmt='grid'))
 
-# 11. Print out the population for the city of Chicago.
+# 12. Print out the population for the city of Chicago.
 
 print(cities['Chicago']['Population'])
 
-# 11. **Extra** An alternative to converting a dictionary into a pandas df then tabulate, you can use dictionary unpacking and tabulate.
+# 13. **Extra** An alternative to converting a dictionary into a pandas df then tabulate, you can use dictionary unpacking and tabulate.
 # Dictionary unpacking is a new feature in Python 3.9 and allows you to unpack a dictionary into a list of dictionaries.
 # You can then use tabulate to print out the table.
 
@@ -116,6 +121,7 @@ print(cities['Chicago']['Population'])
 # Print the table using tabulate
 
 
+<<<<<<< HEAD
 # 12. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
 count_cities_greater_than_1m = 0
 
@@ -126,6 +132,11 @@ for city_info in cities.values():
 
 print(f"The number of cities with a population greater than 1 million is: {count_cities_greater_than_1m}")
 # 13.  How many cities are in the USA? Use .items() to get a list of tuples. Use a for loop to iterate through the list of tuples.
+=======
+# 14. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
+
+# 15.  How many cities are in the USA? Use .items() to get a list of tuples. Use a for loop to iterate through the list of tuples.
+>>>>>>> 65906ed8d0f28086dbc98c849d0d0b4918895f81
 # Hint 1: You will need to use the second item in the tuple. The second item is a dictionary. IE. for city, info in cities.items():
 count_cities_in_usa = 0
 
