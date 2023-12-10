@@ -121,7 +121,6 @@ print(cities['Chicago']['Population'])
 # Print the table using tabulate
 
 
-<<<<<<< HEAD
 # 12. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
 count_cities_greater_than_1m = 0
 
@@ -132,11 +131,6 @@ for city_info in cities.values():
 
 print(f"The number of cities with a population greater than 1 million is: {count_cities_greater_than_1m}")
 # 13.  How many cities are in the USA? Use .items() to get a list of tuples. Use a for loop to iterate through the list of tuples.
-=======
-# 14. How many cities have a population greater than 1 million? Use a for loop to iterate through the dictionary.
-
-# 15.  How many cities are in the USA? Use .items() to get a list of tuples. Use a for loop to iterate through the list of tuples.
->>>>>>> 65906ed8d0f28086dbc98c849d0d0b4918895f81
 # Hint 1: You will need to use the second item in the tuple. The second item is a dictionary. IE. for city, info in cities.items():
 count_cities_in_usa = 0
 
@@ -146,3 +140,4 @@ for city, info in cities.items():
         count_cities_in_usa += 1
 
 print(f"The number of cities in the USA is: {count_cities_in_usa}")
+#Finished
