@@ -25,7 +25,7 @@ st.subheader("This web app will count the number of days until a certain date")
 # 5. Create a date input for the user to enter a date. Streamlit has a function for this called date_input
 # Make sure to save the input into a variable
 
-data= st.date_input("Enter a date: ")
+date= st.date_input("Enter a date: ")
 
 # 6. Create a button for the user to click. Streamlit has a function for this called button
 # Make sure to save the button click into a variable
