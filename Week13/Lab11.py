@@ -74,6 +74,22 @@ def display_products(self):
 
 # 8. **Extra** Create a method called display_products_pretty that prints out all the products in the cart list. (use the tabulate library)
 # Make a nice table table using the tabulate library.
+from tabulate import tabulate
+
+class ShoppingCart:
+    def __init__(self):
+        self.cart = []
+
+    def add_product(self, product):
+        self.cart.append(product)
+
+    def display_products_pretty(self):
+        if not self.cart:
+            print("Cart is empty.")
+        else:
+            headers = ["Product Name", "Price", "Quantity"]
+            product_data = [(product['name'], product['price'], product['quantity']) for product in self.cart]
+            print(tabulate(product_data, headers=headers, tablefmt="pretty"))
 
 
 # 7. Create a class called Store. The class should have the following attributes in the __init__ method:
@@ -81,16 +97,36 @@ def display_products(self):
 # customers -> this should be a list that contains Customer objects.
 
 
-# 8. Create a method called add_product that takes in a Product object and adds it to the products list.
+class Store:
+    def __init__(self):
+        self.products = []
+        self.customers = []
 
+    # 8. Create a method called add_product that takes in a Product object and adds it to the products list.
+    def add_product(self, product):
+        self.products.append(product)
 
-# 9. Create a method called add_customer that takes in a Customer object and adds it to the customers list.
+    # 9. Create a method called add_customer that takes in a Customer object and adds it to the customers list.
+    def add_customer(self, customer):
+        self.customers.append(customer)
 
+    # 10. Create a method called display_products that prints out all the products in the products list.
+    def display_products(self):
+        if not self.products:
+            print("No products in the store.")
+        else:
+            print("Products in the store:")
+            for product in self.products:
+                print(f"{product.name}: ${product.price}")
 
-# 10. Create a method called display_products that prints out all the products in the products list.
-
-# 11. Create a method called display_customers that prints out all the customers in the customers list.
-
+    # 11. Create a method called display_customers that prints out all the customers in the customers list.
+    def display_customers(self):
+        if not self.customers:
+            print("No customers in the store.")
+        else:
+            print("Customers in the store:")
+            for customer in self.customers:
+                print(f"{customer.name} - {customer.email}")
 
 # Typically we would create another file and import the classes we created. For this lab, we will just create the objects in this file to show how its possible.
 
